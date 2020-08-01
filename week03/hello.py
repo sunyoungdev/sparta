@@ -1,13 +1,22 @@
-professor_wizards = [
-    {'name': '덤블도어', 'age': 116},
-    {'name': '맥고나걸', 'age': 85},
-    {'name': '스네이프', 'age': 60},
+def count_fruit(name, fruit_list):
+    count = 0
+    for fruit in fruit_list:
+        if fruit == name:
+            count += 1
+
+    return count
+
+
+fruits = ['사과', '배', '수박', '배']
+result = count_fruit('배', fruits)
+print(result)
+
+wizards_list = [
+    {'name': 'harry', 'age': '40'},
+    {'name': 'ron', 'age': '41'},
+    {'name': 'hermione', 'age': '40'}
 ]
 
-def get_age(name, wizards):
-    for wizard in wizards:
-        if wizard['name'] == name:
-            return wizard['age']
-    return 'wrong name'
 
-print(get_age('덤블도',professor_wizards))
+for wizard in wizards_list:
+    print(wizard['age'])
