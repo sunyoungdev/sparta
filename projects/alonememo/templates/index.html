@@ -91,9 +91,10 @@
                             alert("포스팅 성공!");
                             // 3. 성공 시 페이지 새로고침하기
                             window.location.reload();
-                        } else {
-                            alert("서버 오류!")
                         }
+                    },
+                    error: function (error) {
+                        alert("서버 오류!")
                     }
                 })
             }

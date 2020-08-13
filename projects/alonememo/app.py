@@ -31,9 +31,13 @@ def post_article():
     og_title = soup.select_one('meta[property="og:title"]')
     og_description = soup.select_one('meta[property="og:description"]')
 
-    url_title = og_title['content']
-    url_description = og_description['content']
-    url_image = og_image['content']
+    try:
+        url_title = og_title['content']
+        url_description = og_description['content']
+        url_image = og_image['content']
+    except Exception as ex:
+        print('------- error :', ex)          # error 를 프린트하고 client 에 전달한다
+        raise ex                                    
 
     article = {
         'url': url_receive,
