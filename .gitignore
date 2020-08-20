@@ -4,5 +4,8 @@
 /week04/.idea/
 /projects/justwatch/.idea/
 /projects/moviestar/.idea/
-/./venv/
+/../venv/
+/week04/venv/
 /week06/venv/
+/projects/birdcomming/venv/
+/projects/birdcomming/.idea/
